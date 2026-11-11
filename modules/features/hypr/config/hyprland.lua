@@ -1,0 +1,6 @@
+require('hyprland.environment')
+require('hyprland.execs')
+require('hyprland.general')
+require('hyprland.rules')
+require('hyprland.keybinds')
+require('hyprland.switches')

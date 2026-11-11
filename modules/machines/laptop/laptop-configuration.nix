@@ -3,6 +3,13 @@
 		modules = with self.nixosModules; [
 			laptopConfiguration
 			users
+			networking
+			bootloader
+			bluetooth
+			settings
+			locale
+			features
+			homeManagerConfigurations
 		];
 	};
 }
