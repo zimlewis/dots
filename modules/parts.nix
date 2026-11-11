@@ -29,6 +29,7 @@
 		packages.nautilus = pkgs.nautilus;
 		packages.imv = pkgs.imv;
 		packages.mpv = pkgs.mpv;
+		packages.lf = pkgs.lf;
 
 
 		packages.zen-browser = inputs'.zen-browser.packages.default;
