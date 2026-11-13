@@ -8,9 +8,6 @@
 			useGlobalPkgs = true;
 			useUserPackages = true;
 			extraSpecialArgs = { inherit inputs; };
-			users.zimlewis.imports = [ 
-				self.modules.homeManager.zimlewis
-			];
 		};
 	};
 }

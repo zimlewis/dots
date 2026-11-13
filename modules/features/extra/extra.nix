@@ -4,6 +4,12 @@
 	};
 
 	flake.modules.nixos.extra = moduleWithSystem({ pkgs, self', ... }: {
+		programs.nh = {
+			enable = true;
+			package = pkgs.nh;
+			clean.enable = true;
+			clean.extraArgs = "--keep 3";
+		};
 		environment.systemPackages = [
 			pkgs.tree
 			pkgs.just
@@ -11,6 +17,7 @@
 			pkgs.mpv
 			pkgs.lf
 			pkgs.nnn
+			pkgs.nh
 
 			self'.packages.zen-browser
 		];
