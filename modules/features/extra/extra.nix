@@ -9,6 +9,8 @@
 			pkgs.just
 			pkgs.imv
 			pkgs.mpv
+			pkgs.lf
+			pkgs.nnn
 
 			self'.packages.zen-browser
 		];

@@ -1,6 +1,8 @@
 # Build and then switch to the new flake
 rebuild flake:
-	sudo nixos-rebuild switch --flake {{flake}} 2> ./nix.log
+	sudo nixos-rebuild switch --flake {{flake}} &> ./nix.log
+	nh clean
+
 
 # Build a virtural machine of the flake
 vm flake:
