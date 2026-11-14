@@ -32,15 +32,16 @@
 			pkgs.qutebrowser
 			pkgs.proton-vpn-cli
 			pkgs.woomer
+			pkgs.librewolf
 
-			self'.packages.zen-browser
+			# self'.packages.zen-browser
 			# self'.packages.limusic
 		];
 	});
 
 
 	perSystem = { config, self', inputs', pkgs, system, ... }: {
-		packages.zen-browser = inputs'.zen-browser.packages.default;
+		# packages.zen-browser = inputs'.zen-browser.packages.default;
 		# packages.limusic = inputs'.limusic.packages.default;
 	};
 }
