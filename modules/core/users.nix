@@ -11,7 +11,7 @@
 
 
 		home-manager.users.zimlewis.imports = [ 
-			self.modules.homeManager.zimlewis
+			self.homeUsers.zimlewis
 		];
 	};
 }

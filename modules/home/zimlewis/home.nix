@@ -1,5 +1,5 @@
 { self, config, ... }: {
-	flake.modules.homeManager.zimlewis = {
+	flake.homeUsers.zimlewis = {
 		imports = with self.modules.homeManager; [
 			vis
 			hypr
@@ -8,6 +8,8 @@
 			tmux
 			yazi
 			extra
+			starship
+			quickshell
 		];
 
 		home.stateVersion = "26.05";

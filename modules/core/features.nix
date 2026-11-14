@@ -8,6 +8,8 @@
 			tmux
 			jujutsu
 			extra
+			starship
+			quickshell
 		];
 	};
 }

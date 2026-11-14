@@ -4,12 +4,15 @@
 	};
 
 	flake.modules.nixos.extra = moduleWithSystem({ pkgs, self', ... }: {
-		programs.nh = {
-			enable = true;
-			package = pkgs.nh;
-			clean.enable = true;
-			clean.extraArgs = "--keep 3";
+		programs.bash = {
+			shellAliases = {
+				z = "zoxide";
+				ls = "ls -la";
+			};
 		};
+
+		programs.zoxide.enable = true;
+
 		environment.systemPackages = [
 			pkgs.tree
 			pkgs.just
@@ -18,6 +21,11 @@
 			pkgs.lf
 			pkgs.nnn
 			pkgs.nh
+			pkgs.zoxide
+			pkgs.wiremix
+			pkgs.htop
+			pkgs.bat
+			pkgs.fastfetch
 
 			self'.packages.zen-browser
 		];

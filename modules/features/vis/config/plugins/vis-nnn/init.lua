@@ -15,7 +15,7 @@ vis:command_register('nnn', function(argv, force, win, selection, range)
 
 	if status == 0 and #output >= 1 then
 		vis:feedkeys(string.format(':e "%s"<Enter>', output[1]))
-	elseif status != 0 then
+	elseif status ~= 0 then
 		vis:info(string.format('nnn: Unknown exit status %d: %s', status, msg))
 	end
 

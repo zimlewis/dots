@@ -7,7 +7,7 @@
 		programs.hyprland = {
 			enable = true;
 			package = pkgs.hyprland;
-			# withUWSM = true;
+			withUWSM = true;
 		};
 		hardware.graphics.enable = true;
 		environment.systemPackages = [
