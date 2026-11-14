@@ -1,8 +1,9 @@
 require('vis');
 require('plugins/vis-fzf-open')
 require('plugins/vis-autoclose')
-require('plugins/vis-nnn')
+require('plugins/browse')
 require('plugins/vis-cursormode')
+require('plugins/copypasta')
 
 vis:map(vis.modes.NORMAL, ';', function(keys)
 	vis:feedkeys(':')

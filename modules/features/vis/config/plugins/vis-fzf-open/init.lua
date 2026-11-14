@@ -31,8 +31,8 @@ vis:command_register("fzf", function(argv, force, win, selection, range)
 	local command = string.gsub(
 		[[
 			$fzf_path \
-			--header="Enter:edit,^s:split,^v:vsplit" \
-			--expect="ctrl-s,ctrl-v" \
+			--header="Enter:edit,^h:hsplit,^v:vsplit" \
+			--expect="ctrl-h,ctrl-v" \
 			$fzf_args $args
 		]],
 		'%$([%w_]+)',
@@ -52,7 +52,7 @@ vis:command_register("fzf", function(argv, force, win, selection, range)
 
 	if status == 0 then
 		local action = 'e'
-		if     output[1] == 'ctrl-s' then action = 'split'
+		if     output[1] == 'ctrl-h' then action = 'split'
 		elseif output[1] == 'ctrl-v' then action = 'vsplit'
 		end
 

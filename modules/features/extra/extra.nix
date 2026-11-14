@@ -7,7 +7,8 @@
 		programs.bash = {
 			shellAliases = {
 				z = "zoxide";
-				ls = "ls -la";
+				ls = "eza -lh --group-directories-first --icons=auto";
+				lsa = "ls -la";
 			};
 		};
 
@@ -26,6 +27,10 @@
 			pkgs.htop
 			pkgs.bat
 			pkgs.fastfetch
+			pkgs.eza
+			pkgs.wl-clipboard
+			pkgs.qutebrowser
+			pkgs.proton-vpn-cli
 
 			self'.packages.zen-browser
 		];
