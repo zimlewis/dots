@@ -6,6 +6,7 @@
 			settings = {
 				user.email = "z1ml3w1s123@gmail.com";
 				user.name = "zimlewis";
+				ui.default-command = "log";
 			};
 		};
 	};
