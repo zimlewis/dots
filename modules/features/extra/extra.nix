@@ -40,7 +40,6 @@
 			pkgs.proton-vpn-cli
 			pkgs.woomer
 			pkgs.librewolf
-			pkgs.chromium
 
 			pkgs.fluent-icon-theme
 			pkgs.gnome-disk-utility
