@@ -7,9 +7,11 @@
 			jujutsu
 			tmux
 			yazi
-			extra
 			starship
 			quickshell
+			stylix
+
+			extra
 		];
 
 		home.stateVersion = "26.05";

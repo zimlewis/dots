@@ -7,9 +7,11 @@
 			yazi
 			tmux
 			jujutsu
-			extra
 			starship
 			quickshell
+			stylix
+
+			extra
 		];
 	};
 }

@@ -1,6 +1,6 @@
 # Extra features that don't need to be cared for much
-{ moduleWithSystem, ... }: {
-	flake.modules.homeManager.extra = { ... }: {
+{ moduleWithSystem, inputs, ... }: {
+	flake.modules.homeManager.extra = { pkgs, ... }: {
 	};
 
 	flake.modules.nixos.extra = moduleWithSystem({ pkgs, self', ... }: {
@@ -11,10 +11,10 @@
 				lsa = "ls -la";
 			};
 		};
-
 		programs.zoxide.enable = true;
 
 		environment.systemPackages = [
+			pkgs.nautilus
 			pkgs.tree
 			pkgs.just
 			pkgs.imv
@@ -33,9 +33,7 @@
 			pkgs.proton-vpn-cli
 			pkgs.woomer
 			pkgs.librewolf
-
-			# self'.packages.zen-browser
-			# self'.packages.limusic
+			pkgs.chromium
 		];
 	});
 
