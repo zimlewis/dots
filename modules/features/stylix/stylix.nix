@@ -10,6 +10,16 @@
 			enable = true;
 			polarity = "dark";
 			base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+			fonts = {
+				monospace = {
+					name = "CaskaydiaMono Nerd Font";
+					package = pkgs.nerd-fonts.caskaydia-mono;
+				};
+				sansSerif = {
+					name = "CaskaydiaMono Nerd Font";
+					package = pkgs.nerd-fonts.caskaydia-mono;
+				};
+			};
 		};
 		xdg.portal = {
 			enable = true;

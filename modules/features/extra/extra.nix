@@ -1,6 +1,13 @@
 # Extra features that don't need to be cared for much
 { moduleWithSystem, inputs, ... }: {
 	flake.modules.homeManager.extra = { pkgs, ... }: {
+		gtk = {
+			enable = true;
+			iconTheme = {
+				name = "Fluent";
+				package = pkgs.fluent-icon-theme;
+			};
+		};
 	};
 
 	flake.modules.nixos.extra = moduleWithSystem({ pkgs, self', ... }: {
@@ -34,6 +41,12 @@
 			pkgs.woomer
 			pkgs.librewolf
 			pkgs.chromium
+			pkgs.fluent-icon-theme
+		];
+
+		environment.pathsToLink = [
+			"/share/icons"
+			"/share/pixmaps"
 		];
 	});
 
