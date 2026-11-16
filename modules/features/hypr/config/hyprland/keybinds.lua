@@ -65,3 +65,4 @@ hl.bind('XF86AudioPlay', hl.dsp.exec_cmd('playerctl play-pause'), { locked = tru
 hl.bind('XF86AudioPrev', hl.dsp.exec_cmd('playerctl previous'), { locked = true })
 
 hl.bind('PRINT', hl.dsp.exec_cmd('hyprshot --freeze -m region'))
+-- hl.bind(mainMod .. 'Z', hl.dsp.exec_cmd('woomer'))

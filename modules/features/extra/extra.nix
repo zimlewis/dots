@@ -8,6 +8,18 @@
 				package = pkgs.fluent-icon-theme;
 			};
 		};
+		programs.readline = {
+			enable = true;
+			includeSystemConfig = true;
+			variables = {
+				editing-mode = "vi";
+			};
+			bindings = {
+				"\\C-h" = "backward-kill-word";
+				"\\e[A" = "history-search-backward";
+				"\\e[B" = "history-search-forward";
+			};
+		};
 	};
 
 	flake.modules.nixos.extra = moduleWithSystem({ pkgs, self', ... }: {
@@ -39,7 +51,6 @@
 			pkgs.qutebrowser
 			pkgs.proton-vpn-cli
 			pkgs.woomer
-			pkgs.librewolf
 
 			pkgs.fluent-icon-theme
 			pkgs.gnome-disk-utility

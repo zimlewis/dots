@@ -3,7 +3,7 @@ local M = {
 
 M.styles = {
 	normal = "fore:black,back:white",
-	insert = "fore:white,back:black,underlined",
+	insert = "underlined",
 }
 
 M.last_mode = nil

@@ -10,6 +10,7 @@
 			starship
 			quickshell
 			stylix
+			librewolf
 
 			extra
 		];

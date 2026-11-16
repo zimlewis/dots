@@ -25,5 +25,8 @@ vis.events.subscribe(vis.events.WIN_OPEN, function(win)
 
 	-- Vis options
 	vis:command('set shell bash')
+
+	-- Theme
+	vis:command('set theme default')
 end)
 
