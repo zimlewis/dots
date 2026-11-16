@@ -51,6 +51,7 @@
 			pkgs.qutebrowser
 			pkgs.proton-vpn-cli
 			pkgs.woomer
+			pkgs.feishin
 
 			pkgs.fluent-icon-theme
 			pkgs.gnome-disk-utility

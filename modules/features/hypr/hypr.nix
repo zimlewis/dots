@@ -12,7 +12,10 @@
 		hardware.graphics.enable = true;
 		environment.systemPackages = [
 			pkgs.hyprland
+			pkgs.hyprshot
+			pkgs.hyprpicker
 			pkgs.rofi
+			pkgs.awww
 		];
 	};
 }
