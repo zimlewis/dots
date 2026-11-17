@@ -18,6 +18,7 @@
 				"\\C-h" = "backward-kill-word";
 				"\\e[A" = "history-search-backward";
 				"\\e[B" = "history-search-forward";
+				"\ee" = "edit-and-execute-command";
 			};
 		};
 	};

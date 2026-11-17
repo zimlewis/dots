@@ -11,6 +11,7 @@
 			quickshell
 			stylix
 			librewolf
+			fzf
 
 			extra
 		];

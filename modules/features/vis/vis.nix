@@ -18,7 +18,6 @@
 		in [
 			vis'
 			pkgs.file
-			pkgs.fzf
 		];
 	};
 }

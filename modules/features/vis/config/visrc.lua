@@ -33,7 +33,7 @@ vis.events.subscribe(vis.events.WIN_OPEN, function(win)
 end)
 
 
-vis:command_register("api", function(argv, force, win, selection, range)
+vis:command_register("version", function(argv, force, win, selection, range)
 	local api = vis.API
 	if not api then
 		local api_string = vis.VERSION:match('v%d*%.(%d*).*')

@@ -1,6 +1,6 @@
 Terminal    = 'alacritty'
 FileManager = 'nautilus'
 Menu        = 'rofi -show drun'
-Browser     = 'zen-browser'
+Browser     = 'librewolf'
 Home        = os.getenv('HOME')
 
