@@ -54,6 +54,7 @@
 			pkgs.woomer
 			pkgs.feishin
 			pkgs.gimp
+			pkgs.playerctl
 
 			pkgs.fluent-icon-theme
 			pkgs.gnome-disk-utility

@@ -1,7 +1,7 @@
 # Build and then switch to the new flake
-rebuild configuration flake=".":
+rebuild configuration clean="false" flake=".":
 	sudo nixos-rebuild switch --flake {{flake}}#{{configuration}} 2>&1 | tee ./nix.log
-	nh clean all
+	if {{ clean }} == "true"; then nh clean all; fi
 
 
 # Build a virtural machine of the flake
