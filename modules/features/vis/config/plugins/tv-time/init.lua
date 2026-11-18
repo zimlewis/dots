@@ -59,8 +59,12 @@ function M:live_grep()
 
 	local outputs, success, msg, status = execute(command)
 	if status == 0 and #outputs >= 1 then
-		local file_path = join(pwd, outputs[1])
+		local file_path_and_row = join(pwd, outputs[1])
+		local splt = file_path_and_row:match('.*()%:') -- find last ':'
+		local file_path, row = string.sub(file_path_and_row, 1, splt - 1), string.sub(file_path_and_row, splt + 1)
+
 		vis:feedkeys(string.format(':e "%s"<Enter>', file_path))
+		vis:feedkeys(string.format(':%s<Enter>', row))
 	elseif status ~= 0 then
 		vis:info(string.format('tv-time: Unknown exit status %d: %s', status, msg))
 	end
