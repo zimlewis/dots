@@ -55,6 +55,9 @@
 			pkgs.feishin
 			pkgs.gimp
 			pkgs.playerctl
+			pkgs.p7zip
+			pkgs.unar
+			pkgs.motrix
 
 			pkgs.fluent-icon-theme
 			pkgs.gnome-disk-utility

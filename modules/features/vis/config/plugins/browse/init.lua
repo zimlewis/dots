@@ -1,12 +1,26 @@
 local module = {}
+local lf_backend = {
+	command = 'lf -print-selection',
+	command_format = '%s %s',
+}
 
 -- TODO: introduce abstraction over this
-module.command = 'lf -print-selection'
-module.command_format = '%s %s'
+module.tui_backend = lf_backend
+module.pwd_track = nil
 module.pwd = os.getenv('PWD')
 
 local open_func = function()
-	local command = string.format(module.command_format, module.command, module.pwd)
+	local pwd = module.pwd
+
+	if module.pwd_track ~= nil then
+		pwd = module.pwd_track:get_pwd()
+	end
+
+	local command = string.format(
+		module.tui_backend.command_format,
+		module.tui_backend.command,
+		pwd
+	)
 	local file = io.popen(command)
 
 	local output = {}
@@ -26,7 +40,6 @@ local open_func = function()
 	return true;
 end
 
-vis:map(vis.modes.NORMAL, " ff", open_func, 'Select file to open with external terminal application')
-vis:command_register('nnn', open_func, 'Select file to open with external commandline')
+vis:map(vis.modes.NORMAL, ' t', open_func, 'Select file to open with external terminal application')
 
 return module

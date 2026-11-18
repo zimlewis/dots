@@ -12,6 +12,7 @@
 			stylix
 			librewolf
 			fzf
+			television
 
 			extra
 		];

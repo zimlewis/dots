@@ -11,6 +11,10 @@
 			polarity = "dark";
 			base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 			fonts = {
+				sizes = {
+					applications = 10;
+					desktop = 10;
+				};
 				monospace = {
 					name = "CaskaydiaMono Nerd Font";
 					package = pkgs.nerd-fonts.caskaydia-mono;
