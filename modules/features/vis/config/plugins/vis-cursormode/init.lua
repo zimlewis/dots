@@ -2,8 +2,8 @@ local M = {
 }
 
 M.styles = {
-	normal = "fore:black,back:white",
-	insert = "underlined",
+	normal = "back:blue,fore:black,keep_attribute",
+	insert = "default,keep_attribute,underlined",
 }
 
 M.last_mode = nil

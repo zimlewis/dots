@@ -10,6 +10,7 @@
 			settings
 			locale
 			environment
+
 			features
 		];
 	};

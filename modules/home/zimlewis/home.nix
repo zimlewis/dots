@@ -13,6 +13,7 @@
 			librewolf
 			fzf
 			television
+			lf
 
 			extra
 		];

@@ -1,9 +1,10 @@
-require('vis');
+require('vis')
 require('plugins/vis-fzf-open')
 require('plugins/vis-autoclose')
 require('plugins/vis-cursormode')
 require('plugins/copypasta')
 require('plugins/filetype')
+-- require('plugins/vis-modal')
 
 local browse = require('plugins/browse')
 local tv_time = require('plugins/tv-time')

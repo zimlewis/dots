@@ -1,0 +1,19 @@
+# Keybindings
+map . set hidden!
+map D trash
+map p :paste; clear
+
+# Custom mapping
+map a push :mktouch<space>
+
+# Custom command
+cmd trash %rm -rf $fx
+
+cmd touch %touch "$@"
+cmd mkdir %mkdir -p "$@"
+cmd mktouch %{{
+	case "$1" in
+		*/) mkdir -p "$1" ;;
+		*)  mkdir -p "$(dirname "$1")" && touch "$1" ;;
+	esac
+}}
