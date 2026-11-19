@@ -3,11 +3,11 @@ require('plugins/vis-fzf-open')
 require('plugins/vis-autoclose')
 require('plugins/vis-cursormode')
 require('plugins/copypasta')
+require('plugins/filetype')
 
 local browse = require('plugins/browse')
 local tv_time = require('plugins/tv-time')
 local pwd_track = require('plugins/pwd-track')
-
 local lspc = require('plugins/vis-lspc')
 lspc.logging = true
 
@@ -78,3 +78,6 @@ vis:command_register('version', function(argv, force, win, selection, range)
 
 	return true
 end, 'Print the current vis.API version')
+
+-- Filetypes
+vis.ftdetect.extensions.zc = "zenc"
