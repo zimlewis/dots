@@ -16,6 +16,7 @@ lspc.ls_map.gleam = {
 	name = 'gleam-lsp',
 	cmd = 'gleam lsp',
 }
+lspc.highlight_diagnostics = 'range'
 
 vis:map(vis.modes.NORMAL, ';', function(keys)
 	vis:feedkeys(':')
