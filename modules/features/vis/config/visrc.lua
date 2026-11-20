@@ -10,7 +10,12 @@ local browse = require('plugins/browse')
 local tv_time = require('plugins/tv-time')
 local pwd_track = require('plugins/pwd-track')
 local lspc = require('plugins/vis-lspc')
+
 lspc.logging = true
+lspc.ls_map.gleam = {
+	name = 'gleam-lsp',
+	cmd = 'gleam lsp',
+}
 
 vis:map(vis.modes.NORMAL, ';', function(keys)
 	vis:feedkeys(':')
