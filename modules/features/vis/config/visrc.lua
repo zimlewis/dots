@@ -21,8 +21,15 @@ vis:map(vis.modes.NORMAL, ';', function(keys)
 	vis:feedkeys(':')
 end)
 
+
 vis.events.subscribe(vis.events.INIT, function()
 	vis:command('map! normal <C-p> :fzf<Enter>')
+	
+	vis:command('map! normal <M-j> <C-w>j')
+	vis:command('map! normal <M-k> <C-w>k')
+	vis:command('map! normal <M-h> <C-w>h')
+	vis:command('map! normal <M-l> <C-w>l')
+	vis:command('map! normal <M-c> <C-w>c')
 
 	-- Dependency injection
 	pwd_track:set_from_env()
