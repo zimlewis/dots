@@ -6,5 +6,7 @@
 			# Use @wheel for all sudo users, or list your username explicitly.
 			trusted-users = ["root" "@wheel"];
 		};
+
+		nixpkgs.config.allowUnfree = true;
 	};
 }

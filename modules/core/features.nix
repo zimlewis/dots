@@ -14,6 +14,7 @@
 			fzf
 			television
 			lf
+			vencord
 
 			extra
 		];
