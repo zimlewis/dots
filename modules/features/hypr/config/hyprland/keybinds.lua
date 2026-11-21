@@ -9,7 +9,7 @@ hl.bind(mainMod .. ' + W', hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(
 	mainMod .. ' + M',
-	hl.dsp.exec_cmd('command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch "hl.dsp.exit()"')
+	hl.dsp.exec_cmd('hyprshutdown')
 )
 hl.bind(mainMod .. ' + F', hl.dsp.exec_cmd(FileManager))
 hl.bind(mainMod .. ' + V', hl.dsp.window.float({ action = 'toggle' }))

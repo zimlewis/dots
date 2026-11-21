@@ -16,6 +16,7 @@
 			pkgs.hyprpicker
 			pkgs.rofi
 			pkgs.awww
+			pkgs.hyprshutdown
 		];
 	};
 }
