@@ -11,6 +11,7 @@
 	};
 
 	flake.modules.nixos.hypr = { pkgs, ... }: {
+		programs.hyprlock.enable = true;
 		programs.hyprland = {
 			enable = true;
 			package = pkgs.hyprland;

@@ -40,6 +40,12 @@ Item {
 			icon: 'logout'
 			iconSize: 9
 			variant: Components.Button.ButtonVariant.Default
+			onClicked: lockCommand.running = true
+
+			Process {
+				id: lockCommand
+				command: ["hyprlock"]
+			}
 		}
 		Components.Button {
 			buttonRadius: parent.height / 2
@@ -60,10 +66,16 @@ Item {
 			Layout.preferredHeight: parent.height
 			Layout.preferredWidth: parent.height  // parent = RowLayout, height already resolved
 			variant: Components.Button.ButtonVariant.Default
-			onClicked: shutdownCommand.running = true
+			onClicked: {
+				shutdownCommand.startDetached();
+			}
 			Process {
 				id: shutdownCommand
-				command: ["shutdown", "now"]
+				command: [
+					"hyprshutdown",
+					"-t", "Shutting down...",
+					"--post-cmd", "shutdown -P 0"
+	            ]
 			}
 			icon: "power_settings_new"
 			iconSize: 9

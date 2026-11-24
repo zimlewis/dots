@@ -6,6 +6,7 @@
 			users
 			networking
 			bootloader
+			displayManager
 			bluetooth
 			settings
 			locale

@@ -61,6 +61,7 @@
 			pkgs.playerctl
 			pkgs.p7zip
 			pkgs.unar
+			pkgs.matcha
 			pkgs.motrix
 
 			pkgs.fluent-icon-theme
