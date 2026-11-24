@@ -4,17 +4,17 @@ hl.layer_rule({
     no_anim = true
 })
 
-hl.window_rule({
-	name = "discord-magic",
-	match = { class = "^discord$" },
-	workspace = "special:magic silent",
-})
-
-hl.window_rule({
-	name = "feishin-magic",
-	match = { class = "^feishin$" },
-	workspace = "special:magic silent",
-})
+-- hl.window_rule({
+-- 	name = "discord-magic",
+-- 	match = { class = "^discord$" },
+-- 	workspace = "special:magic silent",
+-- })
+-- 
+-- hl.window_rule({
+-- 	name = "feishin-magic",
+-- 	match = { class = "^feishin$" },
+-- 	workspace = "special:magic silent",
+-- })
 
 hl.window_rule({
     -- Ignore maximize requests from all apps. You'll probably like this.

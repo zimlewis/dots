@@ -139,9 +139,9 @@ Item {
 
 								variant: Components.Button.ButtonVariant.Ghost
 								icon: {
-									if (root.player.loopState === MprisLoopState.None) return "lock_reset"
-									if (root.player.loopState === MprisLoopState.Track) return "settings_backup_restore"
-									if (root.player.loopState === MprisLoopState.Playlist) return "refresh"
+									if (root.player.loopState === MprisLoopState.None) return "repeat"
+									if (root.player.loopState === MprisLoopState.Track) return "repeat_one_on"
+									if (root.player.loopState === MprisLoopState.Playlist) return "repeat_on"
 								}
 								onClicked: {
 									if (root.player.loopSupported) {

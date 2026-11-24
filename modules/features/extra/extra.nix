@@ -53,7 +53,11 @@
 			pkgs.proton-vpn-cli
 			pkgs.woomer
 			pkgs.feishin
-			pkgs.gimp
+			(pkgs.gimp-with-plugins.override {
+				plugins = [
+					pkgs.gimpPlugins.gmic
+				];
+			})
 			pkgs.playerctl
 			pkgs.p7zip
 			pkgs.unar
