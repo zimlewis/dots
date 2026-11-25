@@ -37,7 +37,7 @@ Item {
 			buttonRadius: parent.height / 2
 			Layout.preferredHeight: parent.height
 			Layout.preferredWidth: parent.height  // parent = RowLayout, height already resolved
-			icon: 'logout'
+			icon: 'lock'
 			iconSize: 9
 			variant: Components.Button.ButtonVariant.Default
 			onClicked: lockCommand.running = true
@@ -52,13 +52,19 @@ Item {
 			Layout.preferredHeight: parent.height
 			Layout.preferredWidth: parent.height  // parent = RowLayout, height already resolved
 			iconSize: 9
-			icon: "bedtime"
+			icon: "restart_alt"
 			variant: Components.Button.ButtonVariant.Default
-			onClicked: sleepCommand.running = true
+			onClicked: {
+				rebootCommand.startDetached();
+			}
 
 			Process {
-				id: sleepCommand
-				command: ["systemctl", "suspend"]
+				id: rebootCommand
+				command: [
+					"hyprshutdown",
+					"-t", "Rebooting...",
+					"--post-cmd", "reboot"
+				]
 			}
 		}
 		Components.Button {
