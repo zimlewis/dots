@@ -7,10 +7,7 @@ hl.bind(mainMod .. ' + SHIFT + RETURN', hl.dsp.exec_cmd('[float; center] ' .. Te
 hl.bind(mainMod .. ' + RETURN', hl.dsp.exec_cmd(Terminal))
 hl.bind(mainMod .. ' + W', hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
-hl.bind(
-	mainMod .. ' + M',
-	hl.dsp.exec_cmd('hyprshutdown')
-)
+hl.bind(mainMod .. ' + M', hl.dsp.exec_cmd('hyprlock'))
 hl.bind(mainMod .. ' + F', hl.dsp.exec_cmd(FileManager))
 hl.bind(mainMod .. ' + V', hl.dsp.window.float({ action = 'toggle' }))
 hl.bind(mainMod .. ' + SPACE', hl.dsp.exec_cmd(Menu))
