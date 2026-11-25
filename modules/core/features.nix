@@ -15,6 +15,7 @@
 			television
 			lf
 			vencord
+			zed
 
 			extra
 		];

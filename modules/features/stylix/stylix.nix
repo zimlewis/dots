@@ -6,6 +6,7 @@
 		imports = [
 			inputs.stylix.nixosModules.stylix
 		];
+		# stylix.targets.zed.colors.enable = false;
 		stylix = {
 			enable = true;
 			polarity = "dark";

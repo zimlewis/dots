@@ -1,0 +1,79 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    // File finder, command palette, and other pickers/menus
+    "context": "Picker",
+    "bindings": {
+      "alt-j": "menu::SelectNext",
+      "alt-k": "menu::SelectPrevious"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "alt-h": "workspace::ActivatePaneLeft",
+      "alt-l": "workspace::ActivatePaneRight",
+      "alt-k": "workspace::ActivatePaneUp",
+      "alt-j": "workspace::ActivatePaneDown",
+    },
+    "unbind": {
+      "ctrl-j": "vim::Down",
+    }
+  },
+  {
+    "context": "vim_mode == literal",
+    "unbind": {
+      "ctrl-j": [
+        "vim::Literal",
+        [
+          "ctrl-j",
+          "\n"
+        ]
+      ]
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "ctrl-j": "editor::ContextMenuNext",
+      "ctrl-k": "editor::ContextMenuPrevious"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+      "space l f": "text_finder::Toggle",
+
+    },
+    "unbind": {
+      "ctrl-j": "workspace::ToggleBottomDock",
+      "ctrl-alt-b": "workspace::ToggleRightDock",
+      "ctrl-b": "workspace::ToggleLeftDock",
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "bindings": {
+      "space x": "pane::CloseActiveItem",
+      "space b c": "pane::CloseOtherItems",
+    },
+    "unbind": {
+      "ctrl-w c": "pane::CloseActiveItem",
+      "ctrl-a t": "pane::CloseOtherItems"
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      ">": "editor::Indent",
+      "<": "editor::Outdent",
+    },
+  },
+]

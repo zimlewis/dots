@@ -1,0 +1,38 @@
+[
+  {
+  "label": "mkroot",
+  "command": "mkroot; exec $SHELL -i", // exec $SHELL -i will just create a new shell so you can use the shell afterwards
+  "args": [],
+  "cwd": "$ZED_DIRNAME",
+  "shell": "system",
+  "use_new_terminal": false,
+  "reveal": "always",
+  "hide": "never",
+  "allow_concurrent_runs": true,
+  "show_summary": false
+  },
+  {
+    "label": "fzf-files",
+    "command": "zeditor --reuse \"$(tv vis-files)\"",
+    "hide": "always",
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true,
+    "reveal_target": "center"
+  },
+  {
+    "label": "lf",
+    "command": "dir=$(lf -print-last-dir) && [ -n \"$dir\" ] && zeditor --reuse \"$dir\"",
+    "hide": "always",
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true,
+    "reveal_target": "center"
+  },
+  {
+    "label": "fzf-ripgrep",
+    "command": "zeditor \"$(tv vis-text)\"",
+    "hide": "always",
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true,
+    "reveal_target": "center"
+  }
+]

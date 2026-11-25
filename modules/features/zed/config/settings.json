@@ -1,0 +1,95 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "cli_default_open_behavior": "new_window",
+  "debugger": {
+    "button": false
+  },
+  "search": {
+    "button": false
+  },
+  "diagnostics": {
+    "button": false
+  },
+  "status_bar": {
+    "experimental.show": false,
+    "pending_keystrokes_indicator": false,
+    "line_endings_button": false,
+    "cursor_position_button": false,
+    "active_language_button": false
+  },
+  "project_panel": {
+    "button": false,
+    "hide_root": true,
+    "starts_open": false,
+    "dock": "right",
+  },
+  "suggest_extensions": false,
+  "tab_bar": {
+    "show_tab_bar_buttons": false,
+    "show_nav_history_buttons": false,
+    "show": true
+  },
+  "active_pane_modifiers": {
+    "inactive_opacity": 0.5
+  },
+  "markdown_preview": {
+    "font_family": "CaskaydiaMono Nerd Font"
+  },
+  "ui_font_family": "CaskaydiaMono Nerd Font",
+  "buffer_font_family": "CaskaydiaMono Nerd Font",
+  "title_bar": {
+    "show_branch_status_icon": false,
+    "button_layout": "close:minimize,maximize",
+    "show_user_picture": true,
+    "show_user_menu": false,
+    "show_sign_in": false,
+    "show_onboarding_banner": false,
+    "show_project_items": false,
+    "show_worktree_name": false,
+    "show_branch_name": false
+  },
+  "vim_mode": true,
+  "vim": {
+    "toggle_relative_line_numbers": true
+  },
+  "toolbar": {
+    "code_actions": false,
+    "agent_review": false,
+    "selections_menu": false,
+    "quick_actions": false,
+    "breadcrumbs": false
+  },
+  "terminal": {
+    "button": false,
+    "toolbar": {
+      "breadcrumbs": false
+    }
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Catppuccin Mocha (blue)",
+  },
+  "gutter": {
+    "min_line_number_digits": 0,
+    "folds": false,
+    "runnables": false,
+  },
+  "preview_tabs": {
+    "enable_preview_from_file_finder": true
+  },
+  "file_finder": {
+    "modal_max_width": "xlarge"
+  },
+  "hover_popover_enabled": false,
+  "show_completions_on_input": false
+}
