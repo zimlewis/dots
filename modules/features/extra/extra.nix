@@ -24,17 +24,53 @@
 	};
 
 	flake.modules.nixos.extra = moduleWithSystem({ pkgs, self', ... }: {
-		programs.bash = {
-			shellAliases = {
-				z = "zoxide";
-				ls = "eza -lh --group-directories-first --icons=auto";
-				lsa = "ls -la";
+		programs = {
+			zoxide.enable = true;
+			bash = {
+				shellAliases = {
+					z = "zoxide";
+					ls = "eza -lh --group-directories-first --icons=auto";
+					lsa = "ls -la";
+				};
 			};
 		};
-		programs.zoxide.enable = true;
+
+		services = {
+			gvfs.enable = true;
+		};
+
+		xdg.mime = {
+			enable = true;
+			defaultApplications = let
+				image = "imv.desktop";
+				video = "mpv.desktop";
+			in {
+				  # images
+				"image/png"     = image;
+				"image/jpeg"    = image;
+				"image/gif"     = image;
+				"image/webp"    = image;
+				"image/bmp"     = image;
+				"image/tiff"    = image;
+				"image/svg+xml" = image;
+				"image/avif"    = image;
+				"image/heic"    = image;
+
+				# video
+				"video/mp4"        = video;
+				"video/x-matroska" = video;
+				"video/webm"       = video;
+				"video/quicktime"  = video;
+				"video/x-msvideo"  = video;
+				"video/mpeg"       = video;
+				"video/ogg"        = video;
+				"video/x-flv"      = video;
+			};
+		};
 
 		environment.systemPackages = [
 			pkgs.nautilus
+			pkgs.glib
 			pkgs.tree
 			pkgs.just
 			pkgs.imv
@@ -68,6 +104,7 @@
 			pkgs.gnome-disk-utility
 			pkgs.baobab
 		];
+
 
 		environment.pathsToLink = [
 			"/share/icons"

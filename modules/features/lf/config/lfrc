@@ -7,7 +7,7 @@ map p :paste; clear
 map a push :mktouch<space>
 
 # Custom command
-cmd trash %rm -rf $fx
+cmd trash %gio trash "$fx"
 
 cmd touch %touch "$@"
 cmd mkdir %mkdir -p "$@"
