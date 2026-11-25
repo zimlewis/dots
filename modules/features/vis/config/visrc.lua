@@ -16,6 +16,10 @@ lspc.ls_map.gleam = {
 	name = 'gleam-lsp',
 	cmd = 'gleam lsp',
 }
+lspc.ls_map.gdscript = {
+	name = 'gdscript',
+	cmd = 'nc 127.0.0.1 6005',
+}
 lspc.highlight_diagnostics = 'range'
 
 vis:map(vis.modes.NORMAL, ';', function(keys)
@@ -95,3 +99,4 @@ end, 'Print the current vis.API version')
 
 -- Filetypes
 vis.ftdetect.extensions.zc = "zenc"
+vis.ftdetect.extensions.gd = "gdscript"
