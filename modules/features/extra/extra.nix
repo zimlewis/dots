@@ -35,6 +35,7 @@
 			};
 		};
 
+
 		services = {
 			gvfs.enable = true;
 		};

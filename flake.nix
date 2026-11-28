@@ -11,9 +11,10 @@
 			url = "github:danth/stylix";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		sonora.url = "github:sonorahq/sonora/nightly";
 	};
 
-	outputs = inputs: inputs.flake-parts.lib.mkFlake { 
+	outputs = inputs: inputs.flake-parts.lib.mkFlake {
 		inputs = inputs;
 	} (
 		inputs.import-tree ./modules

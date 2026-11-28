@@ -16,6 +16,7 @@
 			lf
 			vencord
 			zed
+			sonora
 
 			extra
 		];
